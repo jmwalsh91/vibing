@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Card } from "../../components/cards/Card";
+import { Card, CardContent } from "../../components/cards/Card";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -47,7 +47,8 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-bg w-screen min-h-screen overflow-auto flex flex-col items-end">
+    <div className="bg-bg w-screen min-h-screen overflow-auto flex flex-col items-end"
+    style={{ scrollSnapType: "y proximity" }}>
       <header className="w-screen h-16 bg-main fixed m-0 shadow-md">
         <h1 className="text-white text-3xl font-bold">Island</h1>
       </header>
@@ -70,7 +71,9 @@ export default function Home() {
               />
             )}
             <Card className="h-96 w-1/2">
+              <CardContent>
               <p className="text-lg">{sectionContent[index]}</p>
+            </CardContent>
             </Card>
           </AnimatePresence>
         </section>
