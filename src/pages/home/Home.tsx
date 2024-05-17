@@ -52,7 +52,8 @@ export default function Home() {
       style={{ scrollSnapType: "y proximity" }}
     >
       <header className="w-screen h-16 bg-main fixed m-0 shadow-md">
-        <h1 className="text-white text-3xl font-bold">Island</h1>
+        <h1 className="text-white text-3xl font-bold
+        ">Island</h1>
       </header>
       {sections.map((src, index) => (
         <section
