@@ -52,8 +52,12 @@ export default function Home() {
       style={{ scrollSnapType: "y proximity" }}
     >
       <header className="w-screen h-16 bg-main fixed m-0 shadow-md">
-        <h1 className="text-white text-3xl font-bold
-        ">Island</h1>
+        <h1
+          className="text-white text-3xl font-bold
+        "
+        >
+          Island
+        </h1>
       </header>
       {sections.map((src, index) => (
         <section
@@ -73,7 +77,12 @@ export default function Home() {
                   animate="animate"
                   exit="exit"
                 />
-                <motion.div className="ml-32" variants={imageVariants} initial="initial" animate="animate">
+                <motion.div
+                  className="ml-32"
+                  variants={imageVariants}
+                  initial="initial"
+                  animate="animate"
+                >
                   <Card className="h-96 w-1/2">
                     <CardContent>
                       <p className="text-lg">{sectionContent[index]}</p>
